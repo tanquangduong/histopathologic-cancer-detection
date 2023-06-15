@@ -44,7 +44,7 @@ parser.add_argument(
     help="name to save trained model weights",
 )
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     # Load parameters
     args, _ = parser.parse_known_args()
     trainPath = args.train_path

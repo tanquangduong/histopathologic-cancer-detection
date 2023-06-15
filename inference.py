@@ -19,13 +19,13 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--test_image_path",
     type=str,
-    default="./datasets/cancer_test_dataset/00a25e8f04848fe149f609fc10b891fdf67080d7.tif",
+    default="./datasets/cancer_test_dataset/01ca4aacd7904afeba78403d162b3c0fef535944.tif",
     help="path to test dataset directory",
 )
 parser.add_argument(
     "--test_label_path",
     type=str,
-    default="./dataset_downsampling/test_image_labels.csv",
+    default="./datasets//test_image_labels.csv",
     help="path to label of test dataset as csv file",
 )
 parser.add_argument(
@@ -43,9 +43,9 @@ parser.add_argument(
 
 
 def plot_save_prediction(img_list):
-    fig, axs = plt.subplots(1, len(img_list), figsize=(20, 5))
+    fig, ax = plt.subplots(1, len(img_list), figsize=(20, 5))
     for i, img in enumerate(img_list):
-        ax = axs[i]
+#         ax = axs[i]
         ax.axis("off")
         ax.set_title(
             "{:.0f}% Nomal, {:.0f}% Cancer".format(
@@ -56,8 +56,7 @@ def plot_save_prediction(img_list):
     fig.savefig("./output/prediction.png")
 
 
-if __name__ == "_main_":
-    # Load parameters
+if __name__ == "__main__":
     args, _ = parser.parse_known_args()
     testImagePath = args.test_image_path
     testLabelPath = args.test_label_path

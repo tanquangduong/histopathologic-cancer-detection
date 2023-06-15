@@ -1,0 +1,11 @@
+opendatasets 
+pandas
+numpy
+pillow
+scikit-learn
+matplotlib
+torchmetrics
+pytorch_lightning
+chardet
+torch
+torchvision

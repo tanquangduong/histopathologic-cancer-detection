@@ -1,5 +1,5 @@
-# AI driven Pharma
-:tada:  Histopathologic cancer detection: Build, train, inference custom Resnet50 model using transfer learning
+# Histopathologic cancer detection
+:tada:  Build, train, inference custom Resnet50 model using transfer learning for Histopathologic cancer detection
 
 
 ## :white_check_mark: Setup

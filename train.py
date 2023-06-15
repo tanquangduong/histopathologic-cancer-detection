@@ -8,24 +8,25 @@ import argparse
 import pandas as pd
 from idetect.load_model import restnet50_transfer_learning
 from idetect.train_engine import CancerDetectTrainer
+import torch
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--train_path",
     type=str,
-    default="./dataset_downsampling/cancer_train_dataset",
+    default="./datasets/cancer_train_dataset",
     help="path to train dataset directory",
 )
 parser.add_argument(
     "--val_path",
     type=str,
-    default="./dataset_downsampling/cancer_validation_dataset",
+    default="./datasets/cancer_validation_dataset",
     help="path to validation dataset directory",
 )
 parser.add_argument(
     "--label_path",
     type=str,
-    default="./dataset_downsampling/selected_image_labels.csv",
+    default="./datasets/selected_image_labels.csv",
     help="path to label dataset directory",
 )
 parser.add_argument(

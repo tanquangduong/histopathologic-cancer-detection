@@ -63,8 +63,8 @@ class CancerDetectTrainer:
         criterion = nn.CrossEntropyLoss()
         optimizer = optim.Adam(model.fc.parameters())
 
-        for epoch in range(self.parameters["num_epochs"]):
-            print("Epoch {}/{}".format(epoch + 1, num_epochs))
+        for epoch in range(self.parameters["num_epoch"]):
+            print("Epoch {}/{}".format(epoch + 1, self.parameters["num_epoch"]))
             print("-" * 10)
 
             for phase in ["train", "validation"]:
